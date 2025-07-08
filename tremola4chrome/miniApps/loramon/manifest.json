@@ -1,0 +1,25 @@
+{ 
+    "name": "LoRaMon", 
+    "description": "LoRaMon is a Pokemon game implemented on tremola", 
+    "icon": "assets/loramon.svg", 
+    "init": "loramon_init()", 
+    "id": "loramon", 
+    "permissions": ["contacts", "loramon"],
+    "cssFile": "resources/loramon.css", 
+    "scripts": [ 
+      "src/loramon.js" 
+    ], 
+    "htmlFile": "resources/loramon.html", 
+    "scenario": { 
+        "loramon-screen": { 
+            "menu": { 
+                "Settings": "menu_settings", 
+                "About": "menu_about" 
+            }, 
+            "display": [ 
+              "div:back", 
+              "div:loramon-screen" 
+            ] 
+        } 
+    } 
+  } 

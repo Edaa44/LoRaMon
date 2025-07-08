@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LoRaMon</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="loramon.css">
+</head>
+<body>
+  <div id="core">
+    <!-- List View -->
+    <div id="div:loramon_list" class="loramon_container" style="display: none;">
+      <div class="loramon_title">LoRaMon Battles</div>
+    </div>
+
+    <!-- Selection Screen -->
+    <div id="div:loramon_selection" class="loramon_container" style="display: none;">
+      <div class="loramon_title">Choose your LoRaMon</div>
+      <div id="loramon_list"></div>
+    </div>
+
+    <!-- Waiting Screen -->
+    <div id="div:loramon_waiting" class="loramon_container" style="display: none;">
+      <div class="loramon_title">Waiting for opponent...</div>
+      <div class="loramon_loading_spinner"></div>
+    </div>
+
+    <!-- Battle Screen -->
+    <div id="div:loramon_battle" class="loramon_container" style="display: none;">
+      <div class="loramon_title">Battle!</div>
+      <div class="loramon_battle_area">
+        <div class="loramon_opponent">
+          <img id="loramon_opponent_sprite" class="loramon_sprite">
+          <div id="loramon_opponent_name" class="loramon_name"></div>
+          <div class="loramon_hp_bar"></div>
+        </div>
+        <div class="loramon_vs">VS</div>
+        <div class="loramon_player">
+          <img id="loramon_player_sprite" class="loramon_sprite">
+          <div id="loramon_player_name" class="loramon_name"></div>
+          <div class="loramon_hp_bar"></div>
+        </div>
+      </div>
+      <button id="loramon_attack_btn" class="loramon_button">Attack!</button>
+    </div>
+  </div>
+
+  <script>
+    // Initialize when Tremola loads the app
+    function startLoramon() {
+      if (typeof loramon_init === 'function') {
+        loramon_init();
+      }
+    }
+  </script>
+</body>
+</html>
+
